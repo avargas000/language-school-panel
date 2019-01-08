@@ -2,18 +2,35 @@
 
 
 
-<h1> Course Name </h1>
+
     <br>
 
     <br>
     <br>
-<h1> Course Hours</h1>
+
     <br>
 
     <br>
     <br>
 <%= form_for @new_course, html: {class: "course_form"} do |f| %>
+    <h3> Course Name </h3>
     <%= f.text_field :course_name %>
+    <h3> Course Hours</h3>
     <%= f.text_field :hours %>
     <%= f.submit "Create" %>
 <% end %>
+
+
+<p id="count_message"> </p>
+
+<div>
+  <% @course.each do |course| %>
+    <p> <%= course.course_name %> <%= course.hours%> </p>
+    
+    <%= link_to "DELETE", '/course/' + course.id.to_s, method: :delete, class: "btn" %>
+    <%= link_to  "EDIT", edit_course_path(course) %>
+   
+    <br>
+    <br>
+  <% end %>
+</div>

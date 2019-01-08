@@ -1,0 +1,42 @@
+<h1> This is the instructor Webpage</h1>
+
+
+    <br>
+
+    
+
+    <br>
+    <br>
+<%= form_for @new_instructor, html: {class: "instructor_form"} do |i| %>
+    <h3> instructor name</h3>
+    <%= i.text_field :name %>
+    <br>
+
+    <h3> Instructor Age</h3>
+    <%= i.text_field :age %>
+    
+
+    <h3> Instructor Education</h3>
+    <%= i.text_field :education %>
+    
+
+    <h3> Instructor Salary</h3>
+    <%= i.text_field :salary %>
+
+    <%= i.submit "Create" %>
+<% end %>
+
+
+<p id="count_message"> </p>
+
+<div>
+  <% @instructor.each do |instructor| %>
+    <p> <%= instructor.name %> <%= instructor.age%>   <%= instructor.education %> <%= instructor.salary%> </p>
+    
+    <%= link_to "DELETE", '/instructor/' + instructor.id.to_s, method: :delete, class: "btn" %>
+    <%= link_to  "EDIT", edit_instructor_path(instructor) %>
+   
+    <br>
+    <br>
+  <% end %>
+</div>

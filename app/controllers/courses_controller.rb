@@ -12,7 +12,7 @@ class CoursesController < ApplicationController
           else
             flash[:notice] = "YOU TYPED TOO MUCH!"
           end
-          redirect_to '/'
+          redirect_to '/courses'
         end
       
         def edit
@@ -29,7 +29,7 @@ class CoursesController < ApplicationController
         def destroy
           @course = Course.find(params[:id])
           @course.destroy
-          redirect_to '/'
+          redirect_to 'index'
         end
       
         private
