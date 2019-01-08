@@ -4,16 +4,16 @@
 
 <h1> Course Name </h1>
     <br>
-<%= text_field(:name, :course_name) %>
+
     <br>
     <br>
 <h1> Course Hours</h1>
     <br>
-<%= text_field(:hours, :hours) %>
+
     <br>
     <br>
-<%= form_for @new_course,url: course_path, html: {class: "course_form"} do |f| %>
-    <%= f.text_field :name %>
+<%= form_for @new_course, html: {class: "course_form"} do |f| %>
+    <%= f.text_field :course_name %>
     <%= f.text_field :hours %>
     <%= f.submit "Create" %>
 <% end %>
