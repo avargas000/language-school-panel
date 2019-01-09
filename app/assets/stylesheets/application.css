@@ -1,12 +1,18 @@
 .sidebar{
     display: block;
-    float:right;
+    float:left;
     width: 200px;
     height: 100%;
     background-color: orangered;
 }
-.pad{
-   margin-top: 30px;
+
+.table{
+    width: 800px;
+    height: 700px;
+    display:block;
+    margin-left: 40px;
+  
+    background-color: blanchedalmond;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

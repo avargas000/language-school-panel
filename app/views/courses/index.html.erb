@@ -1,40 +1,42 @@
-<h1> This is the course Webpage</h1>
-
-
-
-    <br>
-    <br>
-<%= form_for @new_course, html: {class: "course_form"} do |f| %>
-    <h3> Course Name </h3>
-    <%= f.text_field :course_name %>
-    <h3> Course Hours</h3>
-    <%= f.text_field :hours %>
-    <%= f.submit "Create" %>
-<% end %>
-
-
-<p id="count_message"> </p>
+<div class="table">
+    <h1> This is the course Webpage</h1>
 
 
 
 
-<table class="ui celled table">
-  <thead>
-    <tr><th>Name</th>
-    <th>Hours</th>
-    <th>Delete</th>
-    <th>Edit</th>
+        <br>
+    <%= form_for @new_course, html: {class: "course_form"} do |f| %>
+        <h3> Course Name </h3>
+        <%= f.text_field :course_name %> <h3>
+        Course Hours</h3>
+        <%= f.text_field :hours %>
+        <%= f.submit "Create" %>
+    <% end %>
 
-  </tr></thead>
-  <tbody>
-  <% @course.each do |course| %>
-    <tr>
-      <td data-label="Name"> <%= course.course_name %></td>
-      <td data-label="Age"> <%= course.hours%> </td>
-      <td data-label="Job"> <%= link_to "DELETE", '/courses/' + course.id.to_s, method: :delete, class: "btn" %></td>
-      <td data-label="Job"> <%= link_to  "EDIT", edit_course_path(course) %></td>
-    </tr>
 
-     <% end %>
-  </tbody>
-</table>
+    <p id="count_message"> </p>
+
+
+
+
+    <table class="ui celled table" >
+    <thead>
+        <tr><th>Name</th>
+        <th>Hours</th>
+        <th>Delete</th>
+        <th>Edit</th>
+
+    </tr></thead>
+    <tbody>
+    <% @course.each do |course| %>
+        <tr>
+        <td data-label="Name"> <%= course.course_name %></td>
+        <td data-label="Age"> <%= course.hours%> </td>
+        <td data-label="Job"> <%= link_to "DELETE", '/courses/' + course.id.to_s, method: :delete, class: "btn" %></td>
+        <td data-label="Job"> <%= link_to  "EDIT", edit_course_path(course) %></td>
+        </tr>
+
+        <% end %>
+    </tbody>
+    </table>
+</div>
