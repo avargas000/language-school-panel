@@ -1,0 +1,25 @@
+<h1> This is Where you edit your courses</h1>
+
+
+
+    <br>
+    <br>
+
+
+<div class="flex">
+  <div></div>
+  <div>
+    <%= form_for @course  do |f| %>
+     <h3> Course Name </h3>
+      <%= f.text_field :course_name %>
+       <h3> Course Hours </h3>
+      <%= f.text_field :hours %>
+
+      <br>
+
+      <br>
+      <%= f.submit "Update" %>
+    <% end %>
+  </div>
+  <div></div>
+</div>
