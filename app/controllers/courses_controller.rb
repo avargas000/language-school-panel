@@ -4,7 +4,7 @@ class CoursesController < ApplicationController
           @course = Course.all.reverse
           @new_course = Course.new
         end
-      
+
         def create
           @temp = Course.create(course_params)
           if @temp.valid?
@@ -14,29 +14,29 @@ class CoursesController < ApplicationController
           end
           redirect_to '/courses'
         end
-      
+
         def edit
           @course = Course.find(params[:id])
         end
-      
+
         def update
           @course = Course.find(params[:id])
           @course.update(course_params)
           @course.save
         end
-      
+
         # /post/:id
         def destroy
           @course = Course.find(params[:id])
           @course.destroy
-          redirect_to 'index'
+          redirect_to '/courses'
         end
-      
+
         private
-      
+
         def course_params
           params.require(:course).permit(:course_name, :hours)
         end
-      
-    
+
+
 end
