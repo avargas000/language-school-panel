@@ -9,10 +9,10 @@
 .cont{
     width: 800px
     height: 700px;
-    background-color: red;
+
     margin-right: 40px;
     margin-left: 40px;
-    color: goldenrod;
+    color: red;
 }
 
 .table{

@@ -1,4 +1,5 @@
 class CohortsController < ApplicationController
+before_action :require_login
 
     def index
         @cohort = Cohort.all.reverse
