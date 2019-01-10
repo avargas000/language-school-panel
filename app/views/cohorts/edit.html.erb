@@ -1,0 +1,24 @@
+<h1> This is Where You Edit Your Cohorts</h1>
+
+
+
+    <br>
+    <br>
+
+
+<div class="flex">
+  <div></div>
+  <div>
+    <%= form_for @cohort  do |c| %>
+     <h3> Cohort Name </h3>
+      <%= c.text_field :name %>
+       <h3> Start Date</h3>
+      <%= c.text_field :start_date %>
+       <h3> End Date </h3>
+      <%= c.text_field :end_date %>
+
+      <%= c.submit "Update" %>
+    <% end %>
+  </div>
+  <div></div>
+</div>

@@ -1,3 +1,4 @@
+<div class="table">
 <h1> This is the Cohort Webpage</h1>
 
 
@@ -20,16 +21,32 @@
 <% end %>
 
 
-<p cd="count_message"> </p>
 
-<dcv>
-  <% @cohort.each do |cohort| %>
-    <p> <%= cohort.name %>   <%= cohort.start_date %> <%= cohort.end_date%>   </p>
 
-    <%= link_to "DELETE", '/cohort/' + cohort.id.to_s, method: :delete, class: "btn" %>
-    <%= link_to  "EDIT", edit_cohort_path(cohort) %>
 
-    <br>
-    <br>
-  <% end %>
-</dcv>
+    <table class="ui celled table" >
+    <thead>
+        <tr><th>Name</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Delete</th>
+        <th>Edit</th>
+
+    </tr></thead>
+    <tbody>
+    <% @cohort.each do |cohort| %>
+        <tr>
+        <td data-label="Name"> <%= cohort.name %></td>
+        <td data-label="Age"> <%= cohort.start_date%> </td>
+        <td data-label="Age"> <%= cohort.end_date%> </td>
+
+        <td data-label="Job"><%= link_to "DELETE", '/cohorts/' + cohort.id.to_s, method: :delete, class: "ui red button" %></td>
+
+
+        <td data-label="Job"> <%= link_to  "EDIT", edit_cohort_path(cohort), class:"ui orange button" %></td>
+        </tr>
+
+        <% end %>
+    </tbody>
+    </table>
+</div>

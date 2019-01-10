@@ -11,7 +11,8 @@ before_action :require_login
         if @temp.valid?
           flash[:notice] = "instructor CREATED!"
         else
-          flash[:notice] = "YOU TYPED TOO MUCH!"
+          flash[:notice] = "Couldn't save!"
+          puts @temp.errors.messages
         end
         redirect_to '/instructors'
       end

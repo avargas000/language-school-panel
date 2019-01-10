@@ -36,7 +36,7 @@ before_action :require_login
       private
 
       def cohort_params
-        params.require(:cohort).permit(:cohort_name, :start_date, :end_date)
+        params.require(:cohort).permit(:name, :start_date, :end_date)
       end
 
 
