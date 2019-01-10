@@ -4,20 +4,33 @@
 
 
 
-    <br>
+
     <br>
 <%= form_for @new_cohort, html: {class: "cohort_form"} do |c| %>
-    <h3> cohort name</h3>
-    <%= c.text_field :name %>
-    <br>
 
-    <h3> cohort start</h3>
-    <%= c.text_field :start_date %>
-    <br>
-    <h3> cohort ending</h3>
-    <%= c.text_field :end_date %>
 
-    <%= c.submit "Create" %>
+<div class="ui form">
+  <div class="three fields">
+
+      <div class="field">
+      <label>Cohort name</label>
+     <%= c.text_field :name %>
+     </div>
+
+    <div class="field">
+      <label>Cohort StartDate</label>
+        <%= c.text_field :start_date %>
+         </div>
+
+    <div class="field">
+      <label>Cohort EndDate</label>
+        <%= c.text_field :end_date %>
+    </div>
+
+  </div>
+</div>
+
+    <%= c.submit "Create", class: "ui blue button" %>
 <% end %>
 
 

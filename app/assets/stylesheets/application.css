@@ -20,9 +20,15 @@
     margin-top:25px;
     margin-left: 100px;
     margin-right: 100px;
-     margin-bottom: 70px;
+    margin-bottom: 100px;
 
 
+}
+footer{
+    height:100px;
+    width:100%;
+    color: maroon;
+    background-color:black;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

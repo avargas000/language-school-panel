@@ -1,38 +1,38 @@
-<h1> This is Where You Edit Your Instructors</h1>
+<h1> This is Where You Edit Your Students</h1>
 
 
 
     <br>
     <br>
-    <%= form_for @instructor  do |i| %>
+    <%= form_for @student  do |s| %>
 
 <div class="ui form">
   <div class="four fields">
 
       <div class="field">
-      <label>Instructor name</label>
-    <%= i.text_field :name %>
+      <label>student name</label>
+    <%= s.text_field :name %>
     </div>
 
     <div class="field">
-      <label>Instructor Age</label>
-        <%= i.text_field :age %>
+      <label>student Age</label>
+        <%= s.text_field :age %>
     </div>
 
     <div class="field">
-      <label>Instructor Education</label>
-        <%= i.text_field :education %>
+      <label>Student Education</label>
+        <%= s.text_field :education %>
     </div>
 
  <div class="field">
-      <label>Instructor Salary</label>
-       <%= i.text_field :salary  %>
+      <label>Student Salary</label>
+       <%= s.text_field :occupation  %>
     </div>
   </div>
 </div>
 
 
-      <%= i.submit "Update", class: "ui blue button" %>
+      <%= s.submit "Update", class: "ui blue button" %>
     <% end %>
   </div>
   </div>
