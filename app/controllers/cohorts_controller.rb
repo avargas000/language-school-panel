@@ -2,7 +2,7 @@ class CohortsController < ApplicationController
 
     def index
         @cohort = Cohort.all.reverse
-        @new_cohort = cohort.new
+        @new_cohort = Cohort.new
       end
 
       def create

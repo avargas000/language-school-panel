@@ -1,7 +1,7 @@
 <h1> This is the Cohort Webpage</h1>
 
 
-  
+
 
     <br>
     <br>
@@ -10,16 +10,11 @@
     <%= c.text_field :name %>
     <br>
 
-    <h3> cohort Age</h3>
-    <%= c.text_field :age %>
+    <h3> cohort start</h3>
+    <%= c.text_field :start_date %>
     <br>
-
-    <h3> cohort Educatcon</h3>
-    <%= c.text_field :educatcon %>
-    <br>
-
-    <h3> cohort Salary</h3>
-    <%= c.text_field :salary %>
+    <h3> cohort ending</h3>
+    <%= c.text_field :end_date %>
 
     <%= c.submit "Create" %>
 <% end %>
@@ -30,10 +25,10 @@
 <dcv>
   <% @cohort.each do |cohort| %>
     <p> <%= cohort.name %>   <%= cohort.start_date %> <%= cohort.end_date%>   </p>
-    
-    <%= lcnk_to "DELETE", '/cohort/' + cohort.id.to_s, method: :delete, class: "btn" %>
-    <%= lcnk_to  "EDIT", edit_cohort_path(cohort) %>
-   
+
+    <%= link_to "DELETE", '/cohort/' + cohort.id.to_s, method: :delete, class: "btn" %>
+    <%= link_to  "EDIT", edit_cohort_path(cohort) %>
+
     <br>
     <br>
   <% end %>

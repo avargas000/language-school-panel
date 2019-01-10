@@ -32,8 +32,11 @@
         <tr>
         <td data-label="Name"> <%= course.course_name %></td>
         <td data-label="Age"> <%= course.hours%> </td>
-        <td data-label="Job"> <%= link_to "DELETE", '/courses/' + course.id.to_s, method: :delete, class: "btn" %></td>
-        <td data-label="Job"> <%= link_to  "EDIT", edit_course_path(course) %></td>
+
+        <td data-label="Job"><%= link_to "DELETE", '/courses/' + course.id.to_s, method: :delete, class: "ui red button" %></td>
+
+
+        <td data-label="Job"> <%= link_to  "EDIT", edit_course_path(course), class:"ui orange button" %></td>
         </tr>
 
         <% end %>

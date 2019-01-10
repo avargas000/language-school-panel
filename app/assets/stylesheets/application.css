@@ -1,18 +1,27 @@
-.sidebar{
-    display: block;
-    float:left;
-    width: 200px;
-    height: 100%;
-    background-color: orangered;
+
+.topbar{
+    height:150px;
+    width: 100%;
+    font-size: 40px;
+    color: white;
+    background-color: darkblue;
+}
+.cont{
+    width: 800px
+    height: 700px;
+    background-color: red;
+    margin-right: 40px;
+    margin-left: 40px;
+    color: goldenrod;
 }
 
 .table{
-    width: 800px;
-    height: 700px;
-    display:block;
-    margin-left: 40px;
-  
-    background-color: blanchedalmond;
+
+    margin-top:25px;
+    margin-left: 60px;
+    margin-right: 60px;
+
+
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

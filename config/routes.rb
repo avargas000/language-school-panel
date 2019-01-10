@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :courses
   resources :instructors
-  resources :cohort
+  resources :cohorts
   resources :students
 
     root to: 'courses#index'
