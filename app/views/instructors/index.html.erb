@@ -3,36 +3,45 @@
 
 
 <%= form_for @new_instructor, html: {class: "instructor_form"} do |i| %>
-    <h3> instructor name</h3>
-    <%= i.text_field :name %>
-
-    <h3> Instructor Age</h3>
-    <%= i.text_field :age %>
-
-    <h3> Instructor Education</h3>
-    <%= i.text_field :education %>
-
-    <h3> Instructor Salary</h3>
-    <%= i.text_field :salary %>
-
-    <%= i.submit "Create" %>
-<% end %>
 
 
-<p id="count_message"> </p>
 
+<div class="ui form">
+  <div class="four fields">
 
-<div>
-  <% @instructor.each do |instructor| %>
-    <p> <%= instructor.name %> <%= instructor.age%>   <%= instructor.education %> <%= instructor.salary%> </p>
+      <div class="field">
+      <label>Instructor name</label>
+     <%= i.text_field :name %>
+     </div>
 
-    <%= link_to "DELETE", '/instructor/' + instructor.id.to_s, method: :delete, class: "btn" %>
-    <%= link_to  "EDIT", edit_instructor_path(instructor) %>
+    <div class="field">
+      <label>Instructor Age</label>
+        <%= i.text_field :age %>
+         </div>
 
-    <br>
-    <br>
-  <% end %>
+    <div class="field">
+      <label>Instructor Education</label>
+        <%= i.text_field :education %>
+    </div>
+
+        <div class="field">
+      <label>Instructor Salary</label>
+       <%= i.text_field :salary  %>
+    </div>
+  </div>
 </div>
+
+
+      <%= i.submit "Create", class: "ui blue button" %>
+    <% end %>
+  </div>
+  </div>
+</div>
+
+
+
+
+
 
 
     <table class="ui celled table" >
@@ -57,10 +66,11 @@
         <td data-label="Job"><%= link_to "DELETE", '/instructor/' + instructor.id.to_s, method: :delete, class: "ui red button" %></td>
 
 
-        <td data-label="Job"> <%= link_to  "EDIT", edit_course_path(course), class:"ui orange button" %></td>
+        <td data-label="Job"> <%= link_to  "EDIT", edit_instructor_path(instructor), class:"ui orange button" %></td>
         </tr>
 
         <% end %>
     </tbody>
     </table>
+</div>
 </div>

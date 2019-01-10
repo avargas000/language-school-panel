@@ -1,0 +1,39 @@
+<h1> This is Where You Edit Your Courses</h1>
+
+
+
+    <br>
+    <br>
+    <%= form_for @instructor  do |i| %>
+
+<div class="ui form">
+  <div class="four fields">
+
+      <div class="field">
+      <label>Instructor name</label>
+    <%= i.text_field :name %>
+    </div>
+
+    <div class="field">
+      <label>Instructor Age</label>
+        <%= i.text_field :age %>
+    </div>
+
+    <div class="field">
+      <label>Instructor Education</label>
+        <%= i.text_field :education %>
+    </div>
+
+ <div class="field">
+      <label>Instructor Salary</label>
+       <%= i.text_field :salary  %>
+    </div>
+  </div>
+</div>
+
+
+      <%= i.submit "Update", class: "ui blue button" %>
+    <% end %>
+  </div>
+  </div>
+</div>

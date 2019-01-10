@@ -9,7 +9,7 @@
 .cont{
     width: 800px
     height: 700px;
-
+    margin-bottom: 70px;
     margin-right: 40px;
     margin-left: 40px;
     color: red;
@@ -18,8 +18,9 @@
 .table{
 
     margin-top:25px;
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 100px;
+    margin-right: 100px;
+     margin-bottom: 70px;
 
 
 }
