@@ -1,0 +1,76 @@
+<div class="table">
+<h1> This is the Student Webpage</h1>
+
+
+<%= form_for @new_student, html: {class: "student_form"} do |s| %>
+
+
+
+<div class="ui form">
+  <div class="four fields">
+
+      <div class="field">
+      <label>Student name</label>
+     <%= s.text_field :name %>
+     </div>
+
+    <div class="field">
+      <label>Student Age</label>
+        <%= s.text_field :age %>
+         </div>
+
+    <div class="field">
+      <label>Student Education</label>
+        <%= s.text_field :education %>
+    </div>
+
+        <div class="field">
+      <label>Student Occupation</label>
+       <%= s.text_field :occupation  %>
+    </div>
+  </div>
+</div>
+
+
+      <%= s.submit "Create", class: "ui blue button" %>
+    <% end %>
+  </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+    <table class="ui celled table" >
+    <thead>
+        <tr><th>Name</th>
+        <th>Age</th>
+        <th>Education</th>
+        <th>Salary</th>
+        <th>DELETE</th>
+        <th>Edit</th>
+
+    </tr></thead>
+    <tbody>
+    <% @student.each do |student| %>
+        <tr>
+        <td data-label="Name"> <%= student.name %></td>
+        <td data-label="Age"> <%= student.age%> </td>
+
+        <td data-label="Age"> <%= student.education%> </td>
+        <td data-label="Age"> <%= student.occupation%> </td>
+
+        <td data-label="Job"><%= link_to "DELETE", '/students/' + student.id.to_s, method: :delete, class: "ui red button" %></td>
+
+
+        <td data-label="Job"> <%= link_to  "EDIT", edit_student_path(student), class:"ui orange button" %></td>
+        </tr>
+
+        <% end %>
+    </tbody>
+    </table>
+</div>
+</div>

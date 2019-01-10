@@ -9,7 +9,7 @@ before_action :require_login
       def create
         @temp = Instructor.create(instructor_params)
         if @temp.valid?
-          flash[:notice] = "instructor CREATED!"
+          flash[:notice] = "INSTRUCTOR CREATED!"
         else
           flash[:notice] = "Couldn't save!"
           puts @temp.errors.messages
