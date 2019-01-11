@@ -1,10 +1,25 @@
 
+
+ body > .grid {
+      height: 100%;
+    }
+    .image {
+      margin-top: -100px;
+    }
+    .column {
+      max-width: 450px;
+      float:center;
+      margin-left:100px;
+    }
+
+
+
 .topbar{
     height:150px;
     width: 100%;
     font-size: 40px;
     color: white;
-    background-color: darkblue;
+    background-color: #231E20;
 }
 .cont{
     width: 800px
@@ -30,6 +45,7 @@ footer{
     color: maroon;
     background-color:black;
     position:absolute;
+    margin-bottom: 2px;
 }
 
 .ui.stacked.secondary.segment{
@@ -38,6 +54,17 @@ footer{
 .ui.aligned.grid {
     width: 500px;
     float: center;
+}
+#logo{
+    width: 150px;
+    height: 150px;
+    float:left;
+    display: inline-block;
+}
+#header{
+    float:right;
+    display: inline-block;
+    font-size: 40px;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

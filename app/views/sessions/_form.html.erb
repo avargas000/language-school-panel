@@ -1,22 +1,46 @@
 <%= form_for :session, url: session_path do |form| %>
-  <div class="text-field">
-    <%= form.label :email %>
-    <%= form.text_field :email, type: 'email' %>
-  </div>
 
-  <div class="password-field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
-  </div>
 
-  <div class="submit-field">
-    <%= form.submit %>
-  </div>
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h2 class="ui image header">
+      <div class="content">
+      <div id="clearance" class="sign-up">
+        <h2>Please Proceed</h2>
+      </div>
+    </h2>
+    <form action="https://s.codepen.io/voltron2112/debug/PqrEPM?" method="get" class="ui large form">
+      <div class="ui stacked secondary  segment">
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+     <%= form.text_field :email, type: 'email' %>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+ <%= form.password_field :password %>
+          </div>
+        </div>
 
-  <div class="other-links">
+        <%= form.submit %>  <%= link_to t(".sign_in"), sign_in_path  %>
+<div class="other-links">
     <% if Clearance.configuration.allow_sign_up? %>
       <%= link_to t(".sign_up"), sign_up_path %>
     <% end %>
     <%= link_to t(".forgot_password"), new_password_path %>
   </div>
 <% end %>
+      </div>
+
+
+
+    </form>
+
+    </div>
+  </div>
+</div>
+
+
+
