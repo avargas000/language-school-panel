@@ -29,6 +29,15 @@ footer{
     width:100%;
     color: maroon;
     background-color:black;
+    position:absolute;
+}
+
+.ui.stacked.secondary.segment{
+    width: 500px;
+}
+.ui.aligned.grid {
+    width: 500px;
+    float: center;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

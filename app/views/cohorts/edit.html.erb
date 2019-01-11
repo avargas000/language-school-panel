@@ -1,4 +1,4 @@
-<h1> This is Where You Edit Your Cohorts</h1>
+<h1> This Is Where You Edit Your Cohorts</h1>
 
 
 
@@ -6,19 +6,29 @@
     <br>
 
 
-<div class="flex">
-  <div></div>
-  <div>
-    <%= form_for @cohort  do |c| %>
-     <h3> Cohort Name </h3>
-      <%= c.text_field :name %>
-       <h3> Start Date</h3>
-      <%= c.text_field :start_date %>
-       <h3> End Date </h3>
-      <%= c.text_field :end_date %>
+<%= form_for @cohort, html: {class: "cohort_form"} do |c| %>
 
-      <%= c.submit "Update" %>
-    <% end %>
+
+<div class="ui form">
+  <div class="three fields">
+
+      <div class="field">
+      <label>Cohort name</label>
+     <%= c.text_field :name %>
+     </div>
+
+    <div class="field">
+      <label>Cohort StartDate</label>
+        <%= c.text_field :start_date %>
+         </div>
+
+    <div class="field">
+      <label>Cohort EndDate</label>
+        <%= c.text_field :end_date %>
+    </div>
+
   </div>
-  <div></div>
 </div>
+
+    <%= c.submit "Update", class: "ui blue button" %>
+<% end %>

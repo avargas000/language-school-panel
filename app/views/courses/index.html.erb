@@ -1,21 +1,29 @@
 <div class="table">
-    <h1> This is the course Webpage</h1>
+    <h1> This Is The Course Webpage</h1>
 
 
 
 
         <br>
     <%= form_for @new_course, html: {class: "course_form"} do |f| %>
-        <h3> Course Name </h3>
-        <%= f.text_field :course_name %> <h3>
-        Course Hours</h3>
+
+<div class="ui form">
+  <div class="two fields">
+
+      <div class="field">
+      <label>Course name</label>
+     <%= f.text_field :course_name %>
+     </div>
+
+    <div class="field">
+      <label>Course Lenght</label>
         <%= f.text_field :hours %>
-        <%= f.submit "Create" %>
+         </div>
+
+  </div>
+</div>
+<%= f.submit "Create",  class: "ui green button"%>
     <% end %>
-
-
-    <p id="count_message"> </p>
-
 
 
 
